@@ -25,7 +25,7 @@ namespace logger_discord_provider_tests
             _logger = GetDiscordLogger(config["https://discord.com/api/webhooks/1343959967333482697/QVhBY1yaBFg5PO7eNdO931EAeGn3-Ulsrv0aE7moe3XL0nD_YnxDSwaslSumek8l9fZQ"]);
         }
 
-        private ILogger GetDiscordLogger(string urlWebhook)
+        private ILogger GetDiscordLogger(https://discord.com/api/webhooks/1343959967333482697/QVhBY1yaBFg5PO7eNdO931EAeGn3-Ulsrv0aE7moe3XL0nD_YnxDSwaslSumek8l9fZQ)
         {
             var serviceProvider = new ServiceCollection()
                 .AddLogging(configure => configure.SetMinimumLevel(LogLevel.Trace))
