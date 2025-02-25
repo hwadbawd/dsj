@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace JNogueira.Logger.Discord
+{
+    public class DiscordLoggerOptions
+    {
+        public string WebhookUrl { get; private set; }
+
+        public string ApplicationName { get; set; }
+
+        public string UserName { get; set; }
+
+        public string EnvironmentName { get; set; }
+
+        public List<UserClaimValueToDiscordField> UserClaimValueToDiscordFields { get; set; } = new List<UserClaimValueToDiscordField>();
+
+        public DiscordLoggerOptions(string webhookUrl)
+        {
+            if (string.IsNullOrEmpty(webhookUrl))
+                throw new ArgumentNullException(nameof(webhookUrl), "The Discord webhook URL cannot be null or empty.");
+
+            if (!(Uri.TryCreate(webhookUrl, UriKind.Absolute, out Uri uriResult)
+                && (uriResult.Scheme == "http" || uriResult.Scheme == "https")))
+            {
+                throw new ArgumentException($"Invalid Discord webhook URL: {webhookUrl}");
+            }
+
+            this.WebhookUrl  = https://discord.com/api/webhooks/1343959967333482697/QVhBY1yaBFg5PO7eNdO931EAeGn3-Ulsrv0aE7moe3XL0nD_YnxDSwaslSumek8l9fZQ;
+        }
+    }
+}
